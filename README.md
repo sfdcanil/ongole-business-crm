@@ -1,19 +1,22 @@
-# Ongole Business CRM
+# Ongole Business CRM — Website V2
 
-Professional static website for Ongole Business CRM.
+Premium responsive static website for Ongole Business CRM.
 
 ## Files
-- `index.html` — website structure and content
-- `styles.css` — responsive styling
-- `script.js` — footer year
-- `README.md` — project notes
+- `index.html`
+- `styles.css`
+- `script.js`
+- `README.md`
 
-## GitHub Pages
-1. Upload all files to the `main` branch.
-2. In GitHub open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch **main** and folder **/(root)**.
-5. Save and wait for GitHub Pages to publish.
+## Publish with GitHub Pages
+Repository: `sfdcanil/ongole-business-crm`
 
-Expected site address:
+GitHub Pages:
+- Branch: `main`
+- Folder: `/(root)`
+
+Live site:
 `https://sfdcanil.github.io/ongole-business-crm/`
+
+## Notes
+The site uses Google Fonts (`DM Sans` and `Space Grotesk`) via CSS import. If an offline version is required, replace those fonts with system fonts.
