@@ -1,22 +1,19 @@
-# Ongole Business CRM — Website V2
+# Ongole Business CRM — V2.1
 
-Premium responsive static website for Ongole Business CRM.
+Premium responsive landing page for Ongole Business CRM.
 
-## Files
-- `index.html`
-- `styles.css`
-- `script.js`
-- `README.md`
+## Included
+- CRM consulting positioning
+- Salesforce CRM implementation
+- Salesforce CRM training
+- Lead, pipeline, customer and automation solutions
+- Industry-focused messaging
+- Responsive mobile navigation
+- Polished CRM dashboard hero visual
+- Contact email and Instagram CTA
 
-## Publish with GitHub Pages
-Repository: `sfdcanil/ongole-business-crm`
+## Deploy
+Upload `index.html`, `styles.css`, `script.js`, and `README.md` to the `main` branch of the existing GitHub Pages repository.
 
-GitHub Pages:
-- Branch: `main`
-- Folder: `/(root)`
-
-Live site:
-`https://sfdcanil.github.io/ongole-business-crm/`
-
-## Notes
-The site uses Google Fonts (`DM Sans` and `Space Grotesk`) via CSS import. If an offline version is required, replace those fonts with system fonts.
+Live website:
+https://sfdcanil.github.io/ongole-business-crm/

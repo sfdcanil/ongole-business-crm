@@ -81,6 +81,14 @@ h1 em,h2 span{font-style:normal;color:var(--cyan)}
 .solution-card h3{font-size:1.35rem;letter-spacing:-.03em;margin:50px 0 10px}
 .solution-card p{color:#657487;font-size:.83rem;margin:0}
 .card-line{margin-top:auto;border-top:1px solid rgba(0,0,0,.08);padding-top:13px;color:#476373;font-size:.67rem;font-weight:700}
+.portfolio-section{background:#f0f5f8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.portfolio-card{min-height:330px;padding:27px;border:1px solid var(--line);border-radius:13px;background:#fff;display:flex;flex-direction:column;box-shadow:0 10px 35px rgba(20,40,60,.035)}
+.portfolio-label{color:#0795a5;font:700 .68rem "Space Grotesk";letter-spacing:.15em}
+.portfolio-card h3{font-size:1.35rem;line-height:1.12;letter-spacing:-.03em;margin:35px 0 12px}
+.portfolio-card p{color:#657487;font-size:.83rem;margin:0}
+.technology-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.technology-list span{padding:5px 8px;border-radius:6px;background:#eafbfd;color:#137783;font-size:.64rem;font-weight:700}
 .industries-section{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .industry-grid>div{padding:24px;border:1px solid var(--line);border-radius:12px;display:grid;grid-template-columns:38px 1fr;column-gap:13px;align-items:center}
@@ -122,7 +130,7 @@ h1 em,h2 span{font-style:normal;color:var(--cyan)}
   nav{display:none}.menu-button{display:block}
   .hero-grid,.difference-grid{grid-template-columns:1fr;gap:45px}
   .section-heading{grid-template-columns:1fr;gap:15px}
-  .solution-grid{grid-template-columns:repeat(2,1fr)}
+  .solution-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}
   .industry-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
   .process-grid{grid-template-columns:1fr 1fr}
   .process-connector{display:none}
@@ -132,8 +140,348 @@ h1 em,h2 span{font-style:normal;color:var(--cyan)}
   h1{font-size:3.25rem}.proof-grid{grid-template-columns:1fr 1fr}
   .proof-grid div{border-bottom:1px solid var(--line)}
   .dashboard-metrics{grid-template-columns:1fr}
-  .solution-grid,.industry-grid,.service-grid,.process-grid{grid-template-columns:1fr}
+  .solution-grid,.portfolio-grid,.industry-grid,.service-grid,.process-grid{grid-template-columns:1fr}
   .contact-card{padding:34px 24px;flex-direction:column;align-items:flex-start}
   .contact-actions{width:100%}
   .footer-top,.footer-bottom{flex-direction:column;align-items:flex-start}
+}
+
+
+/* =========================================================
+   V2.1 POLISH OVERRIDES
+   Explicit dashboard/card styling + stronger brand contrast
+   ========================================================= */
+
+.site-header {
+  background: rgba(4, 12, 23, 0.97);
+}
+
+.brand {
+  min-width: 0;
+  color: #ffffff;
+}
+
+.brand-mark {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(145deg, #12344a, #0a1c2e);
+  border: 1px solid rgba(138, 244, 251, 0.75);
+  color: #a8fbff;
+  box-shadow: 0 0 0 4px rgba(54, 217, 232, 0.06), 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.brand strong {
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.brand small {
+  color: #a9bdcb;
+  line-height: 1.25;
+}
+
+/* Dashboard is deliberately scoped so every child gets a predictable layout. */
+.dashboard-card {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid rgba(148, 220, 235, 0.20);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(54, 217, 232, 0.14), transparent 34%),
+    linear-gradient(145deg, #10283b 0%, #0b1b2c 58%, #081522 100%);
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dashboard-card,
+.dashboard-card * {
+  box-sizing: border-box;
+}
+
+.dashboard-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.dashboard-top > div {
+  min-width: 0;
+}
+
+.dashboard-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: #7fa0b3;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.dashboard-top strong {
+  display: block;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.status {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #8af4fb;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard-metrics {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.dashboard-metrics > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 13px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(2, 10, 18, 0.32);
+}
+
+.dashboard-metrics small {
+  display: block;
+  color: #91a9ba;
+  font-size: 10px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.dashboard-metrics strong {
+  display: block;
+  margin: 5px 0 3px;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.dashboard-metrics .up,
+.dashboard-metrics .warn {
+  display: inline-block;
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.dashboard-metrics .up {
+  color: #72e5d0;
+}
+
+.dashboard-metrics .warn {
+  color: #f2d58a;
+}
+
+.dashboard-card .chart {
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  background: rgba(2, 10, 18, 0.20);
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #829bad;
+  font-size: 9px;
+  line-height: 1.25;
+}
+
+.chart-labels span {
+  display: block;
+}
+
+.bars {
+  height: 108px;
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  padding: 14px 6px 0;
+}
+
+.bars i {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  background: linear-gradient(to top, #20aebe, #7beaf0);
+  border-radius: 5px 5px 2px 2px;
+  opacity: 0.9;
+}
+
+.dashboard-card .pipeline {
+  width: 100%;
+  margin-top: 13px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  background: rgba(2, 10, 18, 0.20);
+}
+
+.pipeline-title {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.pipeline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  min-height: 28px;
+  padding: 7px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: #91a9ba;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.pipeline-row b {
+  flex: 0 0 auto;
+  color: #d8edf2;
+  font-size: 10px;
+}
+
+.hero-actions .button {
+  min-height: 48px;
+}
+
+.nav-button {
+  background: rgba(54, 217, 232, 0.05);
+}
+
+@media (max-width: 950px) {
+  .hero-grid {
+    gap: 48px;
+  }
+
+  .dashboard-card {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-wrap {
+    height: 70px;
+  }
+
+  .brand-mark {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand strong {
+    font-size: 0.88rem;
+  }
+
+  .brand small {
+    font-size: 0.62rem;
+  }
+
+  .hero {
+    padding: 68px 0 76px;
+  }
+
+  h1 {
+    font-size: clamp(2.9rem, 14vw, 4rem);
+  }
+
+  .dashboard-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-metrics > div {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .dashboard-metrics strong {
+    margin: 0;
+    font-size: 19px;
+  }
+
+  .dashboard-metrics .up,
+  .dashboard-metrics .warn {
+    justify-self: end;
+  }
+
+  .dashboard-top {
+    gap: 10px;
+  }
+
+  .dashboard-top strong {
+    font-size: 15px;
+  }
+
+  .status {
+    font-size: 9px;
+  }
+}
+
+
+@media (max-width: 950px) {
+  nav.mobile-open {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 4% 18px;
+    background: #07111f;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 22px 35px rgba(0,0,0,.25);
+  }
+
+  nav.mobile-open a {
+    padding: 12px 4px;
+  }
+
+  nav.mobile-open .nav-button {
+    text-align: center;
+    margin-top: 6px;
+  }
 }
